@@ -13,4 +13,4 @@ jobs:
       - name: add
         run: |
           set /a sum=${{env.a}}+${{env.b}}
-          echo 'The sum of ${{env.a}} and ${{env.b}} is ${{sum}}'
+          echo The sum of ${{env.a}} and ${{env.b}} is %sum%
