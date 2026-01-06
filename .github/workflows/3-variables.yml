@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: add
         run: |
-          set /a sum=$(a)+${{env.b}}
-          echo 'The sum of $(a) and $(b) is %sum%'
+          set /a sum=$a+${{env.b}}
+          echo 'The sum of $a and $b is %sum%'
