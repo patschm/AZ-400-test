@@ -1,0 +1,14 @@
+name: 4-VariableGroups
+on: workflow_dispatch
+
+# Not literally available but something similar
+# variables: Use env or repository defined variable (repo home -> settings -> secrets and variables)
+
+jobs:
+  - example-groups:
+    runs-on: windows-latest
+    steps:
+    - script: |
+        echo My name is ${{vars.First}} ${{vars.Last}}
+        echo My secret is ${{secrets.Secret}}
+        
