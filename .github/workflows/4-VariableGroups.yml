@@ -3,12 +3,11 @@ on: workflow_dispatch
 
 # Not literally available but something similar
 # variables: Use env or repository defined variable (repo home -> settings -> secrets and variables)
-jobs: 
+jobs:
   example-groups:
     runs-on: windows-latest
     steps:
-    - name: Groups and Variables
+    - name: Groups and Secrets
       run: |
-        echo My name is ${{vars.First}} ${{vars.Last}}
-        echo My secret is ${{secrets.Secret}}
-        
+        echo 'My name is ${{vars.FIRST} ${{vars.LAST}'
+        echo 'My secret is ${{secrets.SECRET}}'
