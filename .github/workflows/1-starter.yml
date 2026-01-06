@@ -1,11 +1,5 @@
 name: 1-Starter
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch: # manual start
 
 jobs:
