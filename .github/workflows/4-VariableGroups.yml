@@ -10,5 +10,5 @@ jobs:
     steps:
     - name: Groups and Secrets
       run: |
-        echo 'My name is ${{vars.FIRST}} ${{vars.LAST}}'
-        echo 'My secret is ${{secrets.SECRET}}'
+        echo "My name is ${{vars.FIRST}} ${{vars.LAST}}"
+        echo "My secret is ${{secrets.SECRET}}"
