@@ -1,5 +1,5 @@
 name: 8-Stategies
-on: workflow_call
+on: workflow_dispatch
 
 jobs:
   requirements:
@@ -12,4 +12,5 @@ jobs:
         run: |
           echo Using .NET version ${{ matrix.dotnet }}
           
+
         
