@@ -9,8 +9,11 @@ jobs:
         run: echo "Performing some task"
   some_condition:
     needs: some_task
-    if: github.ref == 'refs/heads/develop'
+    if: github.ref == 'refs/heads/master'
     runs-on: windows-latest
+    steps:
+      - name: Some Condition
+        run: echo "This runs only on the master branch"
   some_other_condition:
     needs: some_task
     if: github.event_name == 'workflow_dispatch'
