@@ -4,11 +4,14 @@ on:
     inputs:
       name:
         description: 'A name'
+        type: string
         required: true
         default: 'Helemaal geweldig'
 jobs:
   some_job:
+    runs-on: windows-latest
     steps:
       - name: External workflow
         run: |
           echo "This is an external script with name: ${{inputs.name}}"
+
