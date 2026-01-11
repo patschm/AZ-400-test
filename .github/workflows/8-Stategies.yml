@@ -1,0 +1,15 @@
+name: 8-Stategies
+on: workflow_call
+
+jobs:
+  requirements:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        dotnet: [ '8.0', '9.0', '10.0' ] 
+    steps:
+      - name: Check .NET version
+        run: |
+          echo Using .NET version ${{ matrix.dotnet }}
+          
+        
