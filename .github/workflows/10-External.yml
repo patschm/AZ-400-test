@@ -4,7 +4,7 @@ on:
 
 jobs:
   external-job:
-    uses: ./.github/workflows/10a-External-Workflow.yml
+    uses: ./.github/workflows/10a-External-Script.yml
     with:
       name: "Called from 10-External workflow"
   follow_up:
@@ -13,3 +13,4 @@ jobs:
       - name: Final step
         run: |
           echo "This is the final step of the external job."
+
