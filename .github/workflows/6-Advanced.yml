@@ -1,0 +1,20 @@
+name: 6-Advanced
+on: workflow_dispatch
+
+jobs:
+  some_task:
+    runs-on: windows-latest
+    steps:
+      - name: Some Task
+        run: echo "Performing some task"
+  some_condition:
+    needs: some_task
+    if: github.ref == 'refs/heads/develop'
+    runs-on: windows-latest
+  some_other_condition:
+    needs: some_task
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: windows-latest
+    steps:
+      - name: Some Other Condition
+        run: echo "This runs only on workflow_dispatch events"
