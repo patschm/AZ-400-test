@@ -4,6 +4,7 @@ on: workflow_dispatch
 jobs:
   debug-job:
     runs-on: windows-latest
+    environment: 9-Debug
     steps:
       - name: Print debug information
         if: env.ACTIONS_STEP_DEBUG == 'true'
