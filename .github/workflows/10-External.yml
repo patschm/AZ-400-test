@@ -7,10 +7,11 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Call external workflow
-        uses: ./10a-External-Script.yml
+        uses: ./.github/workflows/10a-External-Script.yml
         with:
           name: "External Workflow" 
       - name: Final step
         run: |
 
           echo "This is the final step of the external job."
+
