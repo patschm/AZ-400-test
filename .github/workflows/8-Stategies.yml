@@ -3,14 +3,14 @@ on: workflow_dispatch
 
 jobs:
   requirements:
-    runs-on: windows-latest
     strategy:
       matrix:
+        os: [ubuntu-latest, windows-latest]
         dotnet: [ '8.0', '9.0', '10.0' ] 
+    runs-on: ${{ matrix.os }}
     steps:
-      - name: Check .NET version
+      - name: OS and .NET version
         run: |
-          echo Using .NET version ${{ matrix.dotnet }}
+          echo "Using .NET version ${{ matrix.dotnet }} on ${{ matrix.os }}"
           
-
         
