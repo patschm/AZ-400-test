@@ -4,14 +4,12 @@ on:
 
 jobs:
   external-job:
+    uses: ./.github/workflows/10a-External-Workflow.yml
+    with:
+      name: "Called from 10-External workflow"
+  follow_up:
     runs-on: windows-latest
     steps:
-      - name: Call external workflow
-        uses: ./.github/workflows/10a-External-Script.yml
-        with:
-          name: "External Workflow" 
       - name: Final step
         run: |
-
           echo "This is the final step of the external job."
-
