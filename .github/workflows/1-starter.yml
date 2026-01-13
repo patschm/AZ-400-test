@@ -4,7 +4,7 @@ on:
 
 jobs:
   example-starter:
-    runs-on: windows-latest
+    runs-on: default
     steps:
     - name: step 1
       run: |
